@@ -47,6 +47,7 @@ export async function handleOwnerClose(logger, interaction, setting) {
 
   await interaction.reply({
     content: setting.onOwnerClose,
+    ephemeral: true,
   })
 
   await thread.setArchived(true, 'Owner used Close button')
